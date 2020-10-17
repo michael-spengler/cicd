@@ -10,3 +10,9 @@ https://github.com/michael-spengler/github-action-cicd
 ## Potential Targets 
 Check whether some projects in https://github.com/sap could benefit from this.
 
+## Potential AddOns
+-- Arweave Intgration - e.g. when it comes to permaapps ...
+-- Deno.land Integration - e.g. when it comes to publishing - adding the webhook ?
+Proposals are welcome
+
+
