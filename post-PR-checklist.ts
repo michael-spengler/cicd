@@ -3,10 +3,9 @@ import { defaultOptions } from 'https://deno.land/x/request@1.3.0/interfaces-and
 
 export async function postPRChecklist() {
 
-    const owner = Deno.args[1]
-    const repo = Deno.args[2]
-    const issueNumber = Deno.args[3]
-    const url = `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments`
+    const repo = Deno.args[1]
+    const issueNumber = Deno.args[2]
+    const url = `https://api.github.com/repos/${repo}/issues/${issueNumber}/comments`
 
     const commentContent = {
         "body": `${await getContent(owner, repo, 'pr-checklist.md')}`
