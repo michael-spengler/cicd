@@ -8,7 +8,7 @@ export async function postPRChecklist() {
     const url = `https://api.github.com/repos/${repo}/issues/${issueNumber}/comments`
 
     const commentContent = {
-        "body": `${await getContent(owner, repo, 'pr-checklist.md')}`
+        "body": `${await getContent(repo, 'pr-checklist.md')}`
     }
 
 
@@ -21,13 +21,13 @@ export async function postPRChecklist() {
     console.log(result)
 }
 
-async function getContent(owner: string, repo: string, path: string): Promise<string> {
+async function getContent(repo: string, path: string): Promise<string> {
 
     defaultOptions.headers = {
         'Authorization': `token ${Deno.args[0]}`
     }
 
-    const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`
+    const url = `https://api.github.com/repos/${repo}/contents/${path}`
     const content = window.atob((await Request.get(url, defaultOptions)).content)
     return content
 }
