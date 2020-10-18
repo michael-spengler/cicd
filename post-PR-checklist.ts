@@ -4,9 +4,9 @@ import "https://deno.land/x/dotenv/load.ts"
 
 export async function postPRChecklist() {
 
-    const owner = 'michael-spengler'
-    const repo = 'temp-test'
-    const issueNumber = '1'
+    const owner = Deno.args[1]
+    const repo = Deno.args[2]
+    const issueNumber = Deno.args[3]
     const url = `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments`
 
     const commentContent = {
