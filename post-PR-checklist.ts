@@ -9,6 +9,10 @@ export async function postPRChecklist() {
     const prNumber = Deno.args[2]
     console.log(`prNumber: ${prNumber}`)
 
+    if (prNumber === undefined || repo.indexOf('/') === -1) {
+        throw new Error(`check the parameterization of this function`)
+    }
+
     const url = `https://api.github.com/repos/${repo}/issues/${prNumber}/comments`
 
     const commentContent = {
