@@ -28,7 +28,17 @@ async function getContent(repo: string, path: string): Promise<string> {
     }
 
     const url = `https://api.github.com/repos/${repo}/contents/${path}`
-    const content = window.atob((await Request.get(url, defaultOptions)).content)
+
+    console.log(`reading checklist content via ${url}`)
+
+    const base64Content = (await Request.get(url, defaultOptions)).content
+
+    console.log(`base64Content: ${base64Content}`)
+
+    const content = window.atob(base64Content)
+
+    console.log(`content: ${content}`)
+
     return content
 }
 
