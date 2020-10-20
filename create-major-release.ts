@@ -8,7 +8,8 @@ import { Helper, ESemanticVersion } from './helper.ts'
 
 export async function createMajorRelease() {
 
-    const token = Deno.env.get('token') as string
+    // const token = Deno.env.get('token') as string
+    const token = Deno.args[0] as string
 
     defaultOptions.headers = {
         'Authorization': `token ${token}`
