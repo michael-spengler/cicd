@@ -1,6 +1,5 @@
 # if commit message contains patch then trigger the corresponding step
- 
- 
+
 name: "create release workflow"
 on:
   push:
