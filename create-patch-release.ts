@@ -1,7 +1,7 @@
 
 import { Request } from 'https://deno.land/x/request@1.3.0/request.ts'
 import { defaultOptions } from 'https://deno.land/x/request@1.3.0/interfaces-and-constants.ts'
-import "https://deno.land/x/dotenv/load.ts"
+// import "https://deno.land/x/dotenv/load.ts"
 
 import { Helper, ESemanticVersion } from './helper.ts'
 
