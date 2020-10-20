@@ -17,4 +17,4 @@ jobs:
       - name: "execution"
         run: | # uncomment the specific steps below which you want to be executed 
           deno --version
-          deno run --allow-net https://deno.land/x/cicd/create-patch-release.ts ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
+          deno run --allow-net --reload https://deno.land/x/cicd/create-patch-release.ts ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
