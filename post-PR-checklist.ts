@@ -24,9 +24,8 @@ export async function postPRChecklist() {
         'Authorization': `token ${Deno.args[0]}`
     }
 
-    const result = await Request.post(url, commentContent)
+    await Request.post(url, commentContent)
 
-    console.log(result)
 }
 
 async function getContent(repo: string, path: string): Promise<string> {

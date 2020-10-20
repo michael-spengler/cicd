@@ -19,15 +19,13 @@ export async function createMajorRelease() {
 
     const nextVersion = await getNextVersion(token, repo)
     
-    console.log(nextVersion)
-
     const url = `https://api.github.com/repos/${Deno.args[1]}/releases`
 
     const xy = {
         "tag_name": nextVersion,
         "target_commitish": "main",
         "name": nextVersion,
-        "body": "Description of the release",
+        "body": "New automated release by GitHub Action",
         "draft": false,
         "prerelease": false
     }
