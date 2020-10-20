@@ -1,0 +1,20 @@
+# if commit message contains patch then trigger the corresponding step
+ 
+ 
+name: "create release workflow"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  createPatchRelease:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "setup"
+        uses: denolib/setup-deno@v2
+        with:
+         deno-version: v1.x
+      - name: "execution"
+        run: | # uncomment the specific steps below which you want to be executed 
+          deno --version
+          deno run --allow-net https://deno.land/x/cicd/create-patch-release.ts ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
