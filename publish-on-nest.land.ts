@@ -1,25 +1,25 @@
 import { Request } from 'https://deno.land/x/request@1.3.0/request.ts'
 import { defaultOptions } from 'https://deno.land/x/request@1.3.0/interfaces-and-constants.ts'
 
-import { CommandLineProcessor } from "https://x.nest.land/commandline-processor@1.0.0/mod.ts"
+// import { CommandLineProcessor } from "https://x.nest.land/commandline-processor@1.0.0/mod.ts"
 
 export async function publishOnNestLand(): Promise<void> {
 
     const versionToBePublished = await getCurrentVersion(Deno.args[0], Deno.args[2])
 
-    console.log(versionToBePublished)
+    console.log(`As soon as 0.3.0 version of eggs is available this would publish this module under version ${versionToBePublished} on https://nest.land`)
     
-    let commandToBeExecuted = `deno upgrade`
-    await CommandLineProcessor.process(commandToBeExecuted)
+    // let commandToBeExecuted = `deno upgrade`
+    // await CommandLineProcessor.process(commandToBeExecuted)
     
-    commandToBeExecuted = `deno install -A -f --unstable -n eggs https://x.nest.land/eggs@0.2.3/mod.ts`
-    await CommandLineProcessor.process(commandToBeExecuted)
+    // commandToBeExecuted = `deno install -A -f --unstable -n eggs https://x.nest.land/eggs@0.2.3/mod.ts`
+    // await CommandLineProcessor.process(commandToBeExecuted)
     
-    commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts link ${Deno.args[1]}`
-    await CommandLineProcessor.process(commandToBeExecuted)
+    // commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts link ${Deno.args[1]}`
+    // await CommandLineProcessor.process(commandToBeExecuted)
 
-    commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts publish --version ${versionToBePublished}`
-    await CommandLineProcessor.process(commandToBeExecuted)
+    // commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts publish --version ${versionToBePublished}`
+    // await CommandLineProcessor.process(commandToBeExecuted)
 
 }
 
