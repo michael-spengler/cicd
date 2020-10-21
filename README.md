@@ -3,11 +3,9 @@
 
 ## Usage Example 
 Setup a GitHub Actions based workflow from which you call the features of the CICD module.  
-To do so: copy & paste e.g. the content of [.github/workflows/release.yml](https://github.com/michael-spengler/cicd/blob/main/.github/workflows/release.yml) to your repo.
+To do so: copy & paste e.g. the content of [.github/workflows/release.yml](https://github.com/michael-spengler/cicd/blob/main/.github/workflows/release.yml) to your repo.  
 
-**Further Example Workflows using the CICD Module**  
-[.github/workflows/pr-checklist.yml](https://github.com/michael-spengler/cicd/blob/main/.github/workflows/pr-checklist.yml)  
-[.github/workflows/notify-via-telegram.yml](https://github.com/michael-spengler/cicd/blob/main/.github/workflows/notify-via-telegram.yml)
+To explore all examples check the [.github/workflows/](https://github.com/michael-spengler/cicd/tree/main/.github/workflows) folder.
 
 ## Contributions
 Contributions are welcome.
