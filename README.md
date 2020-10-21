@@ -6,6 +6,6 @@ Setup a GitHub Actions based workflow from which you call the features of the CI
 To do so: copy & paste e.g. the content of [.github/workflows/release.yml](https://github.com/michael-spengler/cicd/blob/main/.github/workflows/release.yml) to your repo.
 
 ## Contributions
-Contributions are welcome
+Contributions are welcome.
 
 
