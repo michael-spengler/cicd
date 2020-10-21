@@ -1,0 +1,22 @@
+{
+  "name": "CICD",
+  "description": "Deno Module for Continuous Deployment",
+  "stable": true,
+  "files": [
+    "create-major-release.ts",
+    "create-minor-release.ts",
+    "create-patch-release.ts",
+    "helper.ts",
+    "lint.ts",
+    "post-PR-checklist.ts",
+    "publish-on-nest.land.ts",
+    "README.md",
+    "request-cla-signature.ts",
+    "request-dco-signature.ts",
+    "security-scan.ts",
+    "lint.ts",
+    "notify-via-discord.ts",
+    "notify-via-telegram.ts",
+    "notify-via-slack.ts"
+  ]
+}

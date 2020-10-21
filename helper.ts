@@ -26,4 +26,5 @@ export class Helper {
 
         return `v${major}.${minor}.${patch}`
     }
+
 }
