@@ -9,15 +9,16 @@ export async function publishOnNestLand(): Promise<void> {
 
     console.log(versionToBePublished)
     
-    let commandToBeExecuted = `deno install -A -f --unstable -n eggs https://x.nest.land/eggs@0.2.3/mod.ts`
+    let commandToBeExecuted = `deno upgrade`
+    await CommandLineProcessor.process(commandToBeExecuted)
+    
+    commandToBeExecuted = `deno install -A -f --unstable -n eggs https://x.nest.land/eggs@0.2.3/mod.ts`
     await CommandLineProcessor.process(commandToBeExecuted)
     
     commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts link ${Deno.args[1]}`
     await CommandLineProcessor.process(commandToBeExecuted)
 
-
     commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts publish --version ${versionToBePublished}`
-
     await CommandLineProcessor.process(commandToBeExecuted)
 
 }
