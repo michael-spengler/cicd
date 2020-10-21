@@ -1,5 +1,6 @@
-# if commit message contains patch then trigger the corresponding step
- 
+
+# add "create patch release" or "create minor release" or "create major release" to your commit message to use this
+
 name: "create release workflow"
 on:
   push:
@@ -9,13 +10,16 @@ jobs:
   createPatchRelease:
     runs-on: ubuntu-latest
     steps:
-      - name: "setup"
-        if: contains(github.event.head_commit.message, 'create patch release')
-        uses: denolib/setup-deno@v2
+      - name: "setup" # check: https://github.com/actions/virtual-environments/issues/1777
+        uses: denolib/setup-deno@v2 
         with:
          deno-version: v1.x
-      - name: "execution"
+      - name: "check patch"
         if: contains(github.event.head_commit.message, 'create patch release')
-        run: | # uncomment the specific steps below which you want to be executed 
-          deno --version
-          deno run --allow-net --reload https://deno.land/x/cicd/create-patch-release.ts ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
+        run: deno run --allow-net --reload https://deno.land/x/cicd/create-patch-release.ts ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
+      - name: "check minor"
+        if: contains(github.event.head_commit.message, 'create minor release')
+        run: deno run --allow-net --reload https://deno.land/x/cicd/create-minor-release.ts ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
+      - name: "check major"
+        if: contains(github.event.head_commit.message, 'create major release')
+        run: deno run --allow-net --reload https://deno.land/x/cicd/create-major-release.ts ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
