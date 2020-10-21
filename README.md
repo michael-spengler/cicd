@@ -2,7 +2,7 @@
 # Deno Module for Continuous Deployment
 
 ## Usage Example 
-Copy & Paste the content of [release.yml](tbd) to your repo (.github/workflows folder)  
+Copy & Paste the content of [.github/workflows/release.yml](https://github.com/michael-spengler/cicd/blob/main/.github/workflows/release.yml) to your repo.
 
 ## Contributions
 Contributions are welcome
