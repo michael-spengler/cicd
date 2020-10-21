@@ -3,6 +3,8 @@
 # Deno Module for Continuous Deployment
 Potential Challenge for the [Deno / Nest.land Hacktoberfest](https://organize.mlh.io/participants/events/5363-nest-land-hacktoberfest-online-meetup-with-ryan-dahl-sam-williams-and-michael-spengler) 
 
+## Usage Example 
+Copy & Paste the content of [release.yml](tbd) to your repo (.github/workflows folder)
 ## Goal: 
 Have one Deno Module which provides / integrates features around continuous integration / continuous deployment.
 

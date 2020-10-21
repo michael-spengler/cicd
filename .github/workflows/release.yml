@@ -1,5 +1,5 @@
 
-# add "create patch release" or "create minor release" or "create major release" to your commit message to use this
+# add "create patch release" or "create minor release" or "create major release" or "publish on nest.land" to your commit message to use this
 
 name: "create release workflow"
 on:
