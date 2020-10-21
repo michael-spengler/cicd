@@ -1,1 +1,15 @@
 
+name: "Notification regarding New Pull Request via Slack"
+on:
+  pull_request_target: 
+    types: [opened] 
+jobs:
+  prCheckList:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: denolib/setup-deno@v2
+        with:
+         deno-version: v1.x
+      - run: deno run --allow-net https://deno.land/x/cicd/notify-via-slack.ts ${{ secrets.SLACK_BOT_TOKEN }} ${{ github.repository }}
+
+# https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions#github-context
