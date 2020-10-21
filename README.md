@@ -1,22 +1,11 @@
 [![nest badge](https://nest.land/badge.svg)](https://nest.land/package/CICD)
-
 # Deno Module for Continuous Deployment
-Potential Challenge for the [Deno / Nest.land Hacktoberfest](https://organize.mlh.io/participants/events/5363-nest-land-hacktoberfest-online-meetup-with-ryan-dahl-sam-williams-and-michael-spengler) 
 
 ## Usage Example 
-Copy & Paste the content of [release.yml](tbd) to your repo (.github/workflows folder)
-## Goal: 
-Have one Deno Module which provides / integrates features around continuous integration / continuous deployment.
+Setup a GitHub Actions based workflow from which you call the features of the CICD module.  
+To do so: copy & paste e.g. the content of [.github/workflows/release.yml](https://github.com/michael-spengler/cicd/blob/main/.github/workflows/release.yml) to your repo.
 
-## Usage Example
-https://github.com/michael-spengler/github-action-cicd
-
-## Potential Targets 
-Check whether some projects in https://github.com/sap could benefit from this.
-
-## Potential AddOns
--- Arweave Intgration - e.g. when it comes to permaapps ...
--- Deno.land Integration - e.g. when it comes to publishing - adding the webhook ?
-Proposals are welcome
+## Contributions
+Contributions are welcome
 
 
