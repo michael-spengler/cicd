@@ -7,6 +7,9 @@ To do so: copy & paste e.g. the content of [.github/workflows/release.yml](https
 
 To explore all examples check the [.github/workflows/](https://github.com/michael-spengler/cicd/tree/main/.github/workflows) folder.
 
+## Community
+Feel free to join our [Deno CICD Community in Telegram](https://t.me/joinchat/CocyExMX-QW1YRxxFGXveg).
+
 ## Contributions
 Contributions are welcome.
 

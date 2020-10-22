@@ -2,6 +2,10 @@ import { Request } from 'https://deno.land/x/request@1.3.0/request.ts'
 
 export async function notifyViaTelegram() {
     
+    if (Deno.args.length !== 4) {
+        throw new Error('Please check the parameterization')
+    }
+
     const telegramBotToken = Deno.args[0]
     const telegramTargetChatId = Deno.args[1]
     const repo = Deno.args[2]
