@@ -2,6 +2,7 @@
   "name": "CICD",
   "description": "Deno Module for Continuous Deployment",
   "stable": true,
+  "repository": "https://github.com/michael-spengler/cicd",
   "files": [
     "create-major-release.ts",
     "create-minor-release.ts",
