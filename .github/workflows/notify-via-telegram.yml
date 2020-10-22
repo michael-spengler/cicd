@@ -9,6 +9,10 @@ jobs:
       - uses: denolib/setup-deno@v2
         with:
          deno-version: v1.x
-      - run: deno run --allow-net https://deno.land/x/cicd/notify-via-telegram.ts ${{ secrets.TELEGRAM_BOT_TOKEN }} ${{ secrets.TELEGRAM_TARGET_CHAT_ID }} ${{ github.repository }}
+      - run: deno run --allow-net https://deno.land/x/cicd/notify-via-telegram.ts ${{ secrets.TELEGRAM_BOT_TOKEN }} ${{ secrets.TELEGRAM_TARGET_CHAT_ID }} ${{ github.repository }} "Pull Request Created"
+
 
 # https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions#github-context
+# https://api.telegram.org/bot<your_telegram_bot_token>/getMe
+# https://api.telegram.org/bot<your_telegram_bot_token>/getUpdates
+# https://core.telegram.org/bots/api#sendmessage
