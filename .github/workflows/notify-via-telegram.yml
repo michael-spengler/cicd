@@ -1,3 +1,5 @@
+# This sends a notification to the following telegram group https://t.me/joinchat/CocyExMX-QW1YRxxFGXveg
+
 name: "Notification regarding New Pull Request via Telegram"
 on:
   pull_request_target: 
