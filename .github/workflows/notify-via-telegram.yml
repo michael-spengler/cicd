@@ -1,4 +1,4 @@
-# This sends a notification to the following telegram group https://t.me/joinchat/CocyExMX-QW1YRxxFGXveg
+# Join e.g. the following telegram group https://t.me/joinchat/CocyExMX-QW1YRxxFGXveg to see it in action
 
 name: "Notification regarding New Pull Request via Telegram"
 on:
