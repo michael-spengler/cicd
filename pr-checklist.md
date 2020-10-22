@@ -1,5 +1,5 @@
 **Before we can merge your PR please fill out this checklist:**
-- [ ] I hereby confirm I have read and understood the contribution guide
+- [ ] I hereby confirm I have read and understood the [contribution guideline](https://github.com/michael-spengler/cicd/blob/main/contribution-guideline.md)
 - [ ] I confirm that this is my work and that my contribution is **not** malicious
 
 **Not required, but recommended :)**
