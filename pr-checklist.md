@@ -4,5 +4,6 @@
 
 **Not required, but recommended :)**
 - [ ] I am a member of the [Nest.land Discord](https://discord.gg/Swcy7Ws)
+- [ ] I am a member of the [Deno CICD Community in Telegram](https://t.me/joinchat/CocyExMX-QW1YRxxFGXveg)
 - [ ] I am following [@nestdotland](https://twitter.com/nestdotland) on Twitter
 - [ ] I am following [@deno_land](https://twitter.com/deno_land) on Twitter
