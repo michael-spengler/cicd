@@ -1,6 +1,9 @@
 name: "publish to nest.land"
 on:
-  release:
+#  release:
+#    types:
+#      - created
+  issue_comment:
     types:
       - created
 jobs:
@@ -20,7 +23,11 @@ jobs:
           git clone https://github.com/nestdotland/eggs.git
           cd eggs
           git checkout dev
-          deno install -A -f --unstable -n eggs eggs.ts
+          deno install -Af --unstable eggs.ts
+          deno run -A --unstable eggs.ts link ${{ secrets.NESTAPIKEY }}
+          deno run -A --unstable eggs.ts publish --version v0.5.4
+          
+          # deno install -A -f --unstable -n eggs eggs.ts
           # deno run -A --unstable https://x.nest.land/eggs@0.2.3/mod.ts link ${{ secrets.NESTAPIKEY }}
           # deno run -A --unstable https://x.nest.land/eggs@0.2.3/mod.ts publish --version v0.5.4
 
