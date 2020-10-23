@@ -17,8 +17,9 @@ jobs:
 
       - name: Setup Deno
         uses: denolib/setup-deno@v2
-
+        with:
+         deno-version: v1.4.6
       - name: Publish module
         run: |
-          deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts link ${{ secrets.NESTAPIKEY }}
-          deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts publish --version ${{ github.event.inputs.version }}
+          deno run -A --unstable https://x.nest.land/eggs@0.2.3/mod.ts link ${{ secrets.NESTAPIKEY }}
+          deno run -A --unstable https://x.nest.land/eggs@0.2.3/mod.ts publish --version ${{ github.event.inputs.version }}
