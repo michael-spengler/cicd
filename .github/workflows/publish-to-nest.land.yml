@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  release:
+  publishToNestDotLand:
     runs-on: ubuntu-latest
     steps:
       - name: "setup" # check: https://github.com/actions/virtual-environments/issues/1777
