@@ -17,7 +17,7 @@ export async function publishOnNestLand(): Promise<void> {
     await CommandLineProcessor.process(commandToBeExecuted)
 
 }
-
+ 
 
 async function getCurrentVersion(token: string, repo: string): Promise<string> {
     const url = `https://api.github.com/repos/${repo}/releases/latest`
