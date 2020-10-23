@@ -15,7 +15,6 @@ export async function publishOnNestLand(): Promise<void> {
 
     commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.2.3/mod.ts publish --version ${versionToBePublished}`
     await CommandLineProcessor.process(commandToBeExecuted)
-
 }
  
 
@@ -33,6 +32,3 @@ async function getCurrentVersion(token: string, repo: string): Promise<string> {
 
 
 publishOnNestLand()
-
-
-

@@ -10,7 +10,7 @@ jobs:
       - name: "setup" # check: https://github.com/actions/virtual-environments/issues/1777
         uses: denolib/setup-deno@v2 
         with:
-         deno-version: v1.3.0
+         deno-version: v1.4.6
       - name: "check nest.land"
         run: | 
           deno -V
