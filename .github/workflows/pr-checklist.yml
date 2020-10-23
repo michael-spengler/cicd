@@ -1,4 +1,4 @@
-name: "Pull Request Checklist"
+name: "Publish to Nest.land"
 on:
   pull_request_target: 
     types: [opened] 
