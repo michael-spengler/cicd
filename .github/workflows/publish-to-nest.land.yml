@@ -1,0 +1,20 @@
+
+# add "create patch release" or "create minor release" or "create major release" or "publish on nest.land" to your commit message to use this
+
+name: "release workflow"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "setup" # check: https://github.com/actions/virtual-environments/issues/1777
+        uses: denolib/setup-deno@v2 
+        with:
+         deno-version: v1.3.0
+      - name: "check nest.land"
+        run: | 
+          deno -V
+          deno run --allow-net --allow-read --allow-run https://deno.land/x/cicd/publish-on-nest.land.ts ${{ secrets.GITHUB_TOKEN }} ${{ secrets.NESTAPIKEY }} ${{ github.repository }}
