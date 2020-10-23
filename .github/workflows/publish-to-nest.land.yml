@@ -1,7 +1,4 @@
-
-# add "create patch release" or "create minor release" or "create major release" or "publish on nest.land" to your commit message to use this
-
-name: "release workflow"
+name: "publish to nest.land"
 on:
   push:
     branches:
