@@ -1,7 +1,7 @@
 import { Request } from 'https://deno.land/x/request@1.3.0/request.ts'
 import { defaultOptions } from 'https://deno.land/x/request@1.3.0/interfaces-and-constants.ts'
 
-import { CommandLineProcessor } from "https://x.nest.land/commandline-processor@1.0.0/mod.ts"
+import { CommandLineProcessor } from "https://x.nest.land/commandline-processor@1.1.0/mod.ts"
 
 export async function publishOnNestLand(): Promise<void> {
 
