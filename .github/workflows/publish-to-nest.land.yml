@@ -26,8 +26,9 @@ jobs:
           cd eggs
           ls
           git checkout dev
-          deno run -A --unstable eggs.ts link ${{ secrets.NESTAPIKEY }}
-          deno run -A --unstable eggs.ts publish CICD --version v0.5.4
+          cd ..
+          deno run -A --unstable ./eggs/eggs.ts link ${{ secrets.NESTAPIKEY }}
+          deno run -A --unstable ./eggs/eggs.ts publish CICD --version v0.5.4
           
           # deno install -A -f --unstable -n eggs eggs.ts
           # deno run -A --unstable https://x.nest.land/eggs@0.2.3/mod.ts link ${{ secrets.NESTAPIKEY }}
