@@ -4,6 +4,7 @@
   "stable": true,
   "repository": "https://github.com/michael-spengler/cicd",
   "files": [
+    "mod.ts",
     "create-major-release.ts",
     "create-minor-release.ts",
     "create-patch-release.ts",
@@ -18,6 +19,7 @@
     "lint.ts",
     "notify-via-discord.ts",
     "notify-via-telegram.ts",
+    "egg.json",
     "notify-via-slack.ts"
   ]
 }
