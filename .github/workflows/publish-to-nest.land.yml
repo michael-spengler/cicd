@@ -24,6 +24,7 @@ jobs:
           # trouble shooting - probably we'll need to wait for eggs@0.3.0
           git clone https://github.com/nestdotland/eggs.git
           cd eggs
+          ls
           git checkout dev
           deno run -A --unstable eggs.ts link ${{ secrets.NESTAPIKEY }}
           deno run -A --unstable eggs.ts publish CICD --version v0.5.4
