@@ -9,6 +9,7 @@ To explore all examples check the [.github/workflows/](https://github.com/michae
 
 ## Community
 Feel free to join our [Deno CICD Community in Telegram](https://t.me/joinchat/CocyExMX-QW1YRxxFGXveg).
+Feel free to join our [Deno CICD Community in Slack](https://join.slack.com/share/zt-i5ll04c7-BhsJDXGXtG1sBnW7VsY6SQ).
 
 ## Contributions
 Contributions are welcome.
