@@ -1,4 +1,4 @@
-import { Request } from 'https://deno.land/x/request@1.3.1/request.ts'
+import { Request } from 'https://deno.land/x/request@v1.3.1/request.ts'
 
 export async function notifyViaSlack() {
 
