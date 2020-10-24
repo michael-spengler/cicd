@@ -1,16 +1,19 @@
 # Join e.g. the following telegram group https://t.me/joinchat/CocyExMX-QW1YRxxFGXveg to see it in action
 
 name: "Notification regarding New Pull Request via Telegram"
+
 on:
   pull_request_target: 
     types: [opened] 
+
 jobs:
-  prCheckList:
+  notifyViaTelegram:
     runs-on: ubuntu-latest
+
     steps:
       - uses: denolib/setup-deno@v2
         with:
-         deno-version: v1.x
+         deno-version: v1.4.6
       - run: deno run --allow-net https://deno.land/x/cicd/notify-via-telegram.ts ${{ secrets.TELEGRAM_BOT_TOKEN }} ${{ secrets.TELEGRAM_TARGET_CHAT_ID }} ${{ github.repository }} "Pull Request Created - ${{ github.event.pull_request.html_url }}"
 
 

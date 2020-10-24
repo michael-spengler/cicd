@@ -2,13 +2,13 @@
 name: "Notification regarding New Pull Request via Discord"
 
 on:
-  # pull_request_target: 
-  #   types: [opened] 
-   issue_comment:
-     types: [created] # temp for test reasons
+  pull_request_target: 
+    types: [opened] 
+  #  issue_comment:
+  #    types: [created] # temp for test reasons
 
 jobs:
-  prCheckList:
+  notifyViaDiscord:
     runs-on: ubuntu-latest
 
     steps:

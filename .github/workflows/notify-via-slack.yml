@@ -1,12 +1,15 @@
 # To get a Slack Webhook URL, follow instruction here: https://api.slack.com/messaging/webhooks
 
 name: "Notification regarding New Pull Request via Slack"
+
 on:
   pull_request_target: 
     types: [opened] 
+
 jobs:
   notifyViaSlack:
     runs-on: ubuntu-latest
+
     steps:
       - uses: denolib/setup-deno@v2
         with:
