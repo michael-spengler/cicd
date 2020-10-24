@@ -21,6 +21,7 @@ export async function createPatchRelease() {
     
     const url = `https://api.github.com/repos/${Deno.args[1]}/releases`
 
+    console.log(`next version: ${nextVersion}`)
     const xy = {
         "tag_name": nextVersion,
         "target_commitish": "main",
@@ -39,7 +40,7 @@ async function getNextVersion(token: string, repo: string): Promise<string> {
     const url = `https://api.github.com/repos/${repo}/releases/latest`
 
     const result = await Request.get(url)
-
+    console.log(`current version: ${ESemanticVersion.PATCH}`)
     return Helper.incrementVersion(result.tag_name, ESemanticVersion.PATCH)
 }
 
