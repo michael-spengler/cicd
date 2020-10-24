@@ -6,11 +6,11 @@ import { CommandLineProcessor } from "https://deno.land/x/commandline_processor@
 export async function publishOnNestLand(): Promise<void> {
 
     const versionToBePublished = await getCurrentVersion(Deno.args[0], Deno.args[2])
-    
+          
     let commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.3.0/eggs.ts link ${Deno.args[1]}`
     await CommandLineProcessor.process(commandToBeExecuted)
 
-    commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.3.0/eggs.ts publish --version ${versionToBePublished}`
+    commandToBeExecuted = `deno run -A --unstable https://x.nest.land/eggs@0.3.0/eggs.ts publish --version ${versionToBePublished} --no-check -Y`
     await CommandLineProcessor.process(commandToBeExecuted)
 }
  
