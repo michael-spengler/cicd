@@ -27,4 +27,44 @@ export class Helper {
         return `v${major}.${minor}.${patch}`
     }
 
+    public static translate(gitHubEventName): string {
+
+        // switch(gitHubEventName) {
+        //     case "check_run": return 
+        //     case "issue_commet": return "An issue has been created"
+        //     default "check_run": return `the following event had been raised: ${}`
+
+        // }
+        return ''
+    }
+
 }
+
+
+
+// check_suite
+// create
+// delete
+// deployment
+// deployment_status
+// fork
+// gollum
+// issue_comment
+// issues
+// label
+// milestone
+// page_build
+// project
+// project_card
+// project_column
+// public
+// pull_request
+// pull_request_review
+// pull_request_review_comment
+// pull_request_target
+// push
+// registry_package
+// release
+// status
+// watch
+// workflow_run
