@@ -1,4 +1,4 @@
-import { Request } from 'https://deno.land/x/request@1.3.0/request.ts'
+import { Request } from 'https://deno.land/x/request@1.3.1/request.ts'
 
 export async function notifyViaSlack() {
 
@@ -14,7 +14,12 @@ export async function notifyViaSlack() {
         "text": `https://github.com/${repo}: ${message}`
     };
 
-    await Request.post(slackWebhookUrl, payload)
+
+    try {
+        await Request.post(slackWebhookUrl, payload)
+    } catch (error) {
+        console.log(error.message)
+    }
 
 }
 
