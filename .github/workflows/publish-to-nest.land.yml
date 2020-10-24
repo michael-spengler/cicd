@@ -1,6 +1,6 @@
 name: "publish to nest.land"
 on:
-  issue_comment:
+  release:
     types:
       - created
 jobs:
