@@ -33,7 +33,6 @@ export async function createPatchRelease() {
 
 
     await Request.post(url, xy)
-
 }
 
 async function getNextVersion(token: string, repo: string): Promise<string> {
