@@ -1,0 +1,8 @@
+{
+  "name": "",
+  "description": "",
+  "files": [
+    "./**/*.ts",
+    "README.md"
+  ]
+}
