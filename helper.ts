@@ -27,7 +27,7 @@ export class Helper {
         return `v${major}.${minor}.${patch}`
     }
 
-    public static translate(gitHubEventName): string {
+    public static translate(gitHubEventName: string): string {
 
         // switch(gitHubEventName) {
         //     case "check_run": return 
