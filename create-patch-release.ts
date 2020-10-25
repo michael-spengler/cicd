@@ -18,10 +18,11 @@ export async function createPatchRelease() {
     const repo = Deno.args[1] as string
 
     const nextVersion = await getNextVersion(repo)
-    
+
     const url = `https://api.github.com/repos/${Deno.args[1]}/releases`
 
     console.log(`next version: ${nextVersion}`)
+
     const xy = {
         "tag_name": nextVersion,
         "target_commitish": "main",
@@ -31,8 +32,22 @@ export async function createPatchRelease() {
         "prerelease": false
     }
 
+    const result = await Request.post(url, xy)
 
-    await Request.post(url, xy)
+    if (result.tag_name === nextVersion) {
+        console.log("it worked with branch main")
+    } else {
+        const xy = {
+            "tag_name": nextVersion,
+            "target_commitish": "master",
+            "name": nextVersion,
+            "body": "New automated release by GitHub Action",
+            "draft": false,
+            "prerelease": false
+        }
+        
+        await Request.post(url, xy)
+    }
 }
 
 async function getNextVersion(repo: string): Promise<string> {
@@ -43,4 +58,4 @@ async function getNextVersion(repo: string): Promise<string> {
     return Helper.incrementVersion(result.tag_name, ESemanticVersion.PATCH)
 }
 
-createPatchRelease()
+await createPatchRelease()

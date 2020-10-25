@@ -31,7 +31,22 @@ export async function createMajorRelease() {
     }
 
 
-    await Request.post(url, xy)
+    const result = await Request.post(url, xy)
+
+    if (result.tag_name === nextVersion) {
+        console.log("it worked with branch main")
+    } else {
+        const xy = {
+            "tag_name": nextVersion,
+            "target_commitish": "master",
+            "name": nextVersion,
+            "body": "New automated release by GitHub Action",
+            "draft": false,
+            "prerelease": false
+        }
+        
+        await Request.post(url, xy)
+    }
 
 }
 
