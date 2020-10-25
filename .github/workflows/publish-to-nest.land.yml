@@ -1,7 +1,11 @@
 name: "publish current release to nest.land"
 
+# on:
+#   release:
+#     types:
+#       - created
 on:
-  release:
+  issue_comment:
     types:
       - created
 
