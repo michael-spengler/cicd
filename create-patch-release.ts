@@ -39,7 +39,7 @@ async function getNextVersion(repo: string): Promise<string> {
     const url = `https://api.github.com/repos/${repo}/releases/latest`
 
     const result = await Request.get(url)
-    console.log(`current version: ${ESemanticVersion.tag_name}`)
+    console.log(`current version: ${result.tag_name}`)
     return Helper.incrementVersion(result.tag_name, ESemanticVersion.PATCH)
 }
 

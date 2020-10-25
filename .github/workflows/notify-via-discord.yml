@@ -1,3 +1,4 @@
+# To get your DISCORD_WEBHOOK_URL - right click your server --> server settings --> integrations
 
 name: "Notification regarding New Pull Request via Discord"
 
