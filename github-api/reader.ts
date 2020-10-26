@@ -12,8 +12,8 @@ export class GitHubReader {
 
     public static async getFile(token: string, repo: string, path: string): Promise<any> {
 
-        const token = Deno.args[0] as string
-        const repo = Deno.args[1] as string
+        // const token = Deno.args[0] as string
+        // const repo = Deno.args[1] as string
 
         defaultOptions.headers = {
             'Authorization': `token ${token}`
