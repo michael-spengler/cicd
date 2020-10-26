@@ -5,7 +5,6 @@ import { defaultOptions } from 'https://deno.land/x/request@1.3.0/interfaces-and
 
 import { Helper, ESemanticVersion } from './helper.ts'
 
-
 export async function createMajorRelease() {
 
     // const token = Deno.env.get('token') as string
