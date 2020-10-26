@@ -19,5 +19,5 @@ jobs:
 
 # https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions#github-context
 # https://api.telegram.org/bot<your_telegram_bot_token>/getMe
-# https://api.telegram.org/bot<your_telegram_bot_token>/getUpdates
+# https://api.telegram.org/bot<your_telegram_bot_token>/getUpdates - -320338181 ;)
 # https://core.telegram.org/bots/api#sendmessage
