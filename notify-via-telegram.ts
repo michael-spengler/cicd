@@ -13,7 +13,7 @@ export async function notifyViaTelegram() {
     
     const messageToBeSent = `https://github.com/${repo}: ${message}`
 
-    const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramTargetChatId}&text=${messageToBeSent}&disable_web_page_preview=true`
+    const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramTargetChatId}&text=${encodeURIComponent(messageToBeSent)}&disable_web_page_preview=true`
     
     await Request.get(url)
 }
